@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IKEA - Account Verification Required</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', 'Arial', sans-serif; 
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 440px;
+            width: 100%;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo { 
+            color: #0058a3;
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+        .tagline {
+            color: #ffcc00;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .login-box {
+            background: white;
+            padding: 48px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border: 1px solid #e1e5e9;
+        }
+        .alert-banner {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .alert-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .alert-content {
+            flex: 1;
+        }
+        .alert-title {
+            font-weight: 700;
+            color: #856404;
+            margin-bottom: 4px;
+            font-size: 15px;
+        }
+        .alert-text {
+            color: #856404;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+        h1 {
+            color: #2d3748;
+            margin-bottom: 8px;
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .subtitle {
+            color: #718096;
+            text-align: center;
+            margin-bottom: 32px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        .form-group {
+            margin-bottom: 24px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #4a5568;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.2s;
+        }
+        input:focus {
+            outline: none;
+            border-color: #0058a3;
+            box-shadow: 0 0 0 3px rgba(0, 88, 163, 0.1);
+        }
+        .btn {
+            width: 100%;
+            padding: 16px;
+            background: #0058a3;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-bottom: 24px;
+        }
+        .btn:hover {
+            background: #004a8a;
+        }
+        .help-links {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .help-link {
+            color: #0058a3;
+            text-decoration: none;
+            font-size: 14px;
+            margin: 0 12px;
+        }
+        .help-link:hover {
+            text-decoration: underline;
+        }
+        .security-footer {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            padding: 24px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .demo-notice {
+            color: #e53e3e;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .demo-description {
+            color: #718096;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 32px;
+            color: #a0aec0;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">IKEA</div>
+            <div class="tagline">Creating a better everyday life</div>
+        </div>
+        
+        <div class="login-box">
+            <div class="alert-banner">
+                <div class="alert-icon">⚠️</div>
+                <div class="alert-content">
+                    <div class="alert-title">Security Verification Required</div>
+                    <div class="alert-text">We've detected unusual login activity from your account. Please verify your identity to continue.</div>
+                </div>
+            </div>
+
+            <h1>Sign in to your account</h1>
+            <p class="subtitle">Enter your credentials to verify your identity and secure your account.</p>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" placeholder="your.email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn">Verify & Sign In</button>
+            </form>
+
+            <div class="help-links">
+                <a href="#" class="help-link">Forgot password?</a>
+                <a href="#" class="help-link">Create account</a>
+                <a href="#" class="help-link">Need help?</a>
+            </div>
+
+            <div class="security-footer">
+                <div class="demo-notice">SECURITY DEMONSTRATION</div>
+                <div class="demo-description">
+                    This is a simulated phishing page created for IKEA's bug bounty program. 
+                    No credentials are collected, stored, or transmitted. This page exists solely 
+                    to demonstrate security vulnerabilities responsibly.
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 IKEA International. This is a security research demonstration.</p>
+            <p>Bug Bounty Program - Responsible Disclosure</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Create a more realistic looking loading state
+            const btn = this.querySelector('.btn');
+            const originalText = btn.textContent;
+            btn.textContent = 'Verifying...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                alert('SECURITY DEMONSTRATION:\n\nThis is a simulated phishing page for IKEA bug bounty program.\n\nNo credentials are collected or stored. This demo shows how open redirect vulnerabilities can be exploited for phishing attacks.');
+                
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }, 1500);
+        });
+
+        // Add some interactive effects
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'translateY(-2px)';
+            });
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
